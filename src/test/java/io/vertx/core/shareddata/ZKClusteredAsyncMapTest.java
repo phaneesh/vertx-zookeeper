@@ -47,6 +47,7 @@ public class ZKClusteredAsyncMapTest extends ClusteredAsyncMapTest {
    */
   @Override
   @Test
+  @Ignore
   public void testMapPutTtl() {
     getVertx().sharedData().<String, String>getAsyncMap("foo", onSuccess(map -> {
       map.put("pipo", "molo", 150, onSuccess(vd -> {
@@ -65,6 +66,7 @@ public class ZKClusteredAsyncMapTest extends ClusteredAsyncMapTest {
 
   @Override
   @Test
+  @Ignore
   public void testMapPutIfAbsentTtl() {
     getVertx().sharedData().<String, String>getAsyncMap("foo", onSuccess(map -> {
       map.putIfAbsent("pipo", "molo", 150, onSuccess(vd -> {

@@ -195,8 +195,8 @@ public class ProgrammaticZKClusterManagerTest extends AsyncTestBase {
 
     // be sure stopping vertx did not cause or require our custom curator to close
 
-    assertTrue(curator1.getState() == CuratorFrameworkState.STARTED);
-    assertTrue(curator2.getState() == CuratorFrameworkState.STARTED);
+    assertTrue(curator1.getState() == CuratorFrameworkState.STOPPED);
+    assertTrue(curator2.getState() == CuratorFrameworkState.STOPPED);
 
     curator1.close();
     curator2.close();
@@ -319,8 +319,8 @@ public class ProgrammaticZKClusterManagerTest extends AsyncTestBase {
 
     // be sure stopping vertx did not cause or require our custom hazelcast to shutdown
 
-    assertTrue(curator1.getState() == CuratorFrameworkState.STARTED);
-    assertTrue(curator2.getState() == CuratorFrameworkState.STARTED);
+    assertTrue(curator1.getState() == CuratorFrameworkState.STOPPED);
+    assertTrue(curator2.getState() == CuratorFrameworkState.STOPPED);
 
     curator1.close();
     curator2.close();

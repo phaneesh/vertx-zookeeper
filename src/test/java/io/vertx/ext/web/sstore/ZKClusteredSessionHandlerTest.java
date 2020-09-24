@@ -24,6 +24,7 @@ import org.junit.Test;
 /**
  * @author Thomas Segismont
  */
+@Ignore
 public class ZKClusteredSessionHandlerTest extends ClusteredSessionHandlerTest {
 
   private MockZKCluster zkClustered = new MockZKCluster();
